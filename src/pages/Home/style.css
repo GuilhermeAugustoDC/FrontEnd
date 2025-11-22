@@ -1,0 +1,13 @@
+/* Tema escuro atualizado para a página Home */
+.home-container {
+	background-color: #222222;
+	color: #b5b5b5;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-container h1 {
+	color: #909090;
+	margin-bottom: 20px;
+}

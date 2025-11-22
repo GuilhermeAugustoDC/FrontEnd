@@ -1,0 +1,74 @@
+/* Reset básico para consistência */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Tipografia responsiva */
+html {
+	font-size: 16px;
+}
+
+@media (max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+/* Layout responsivo */
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #222222;
+	color: #b5b5b5;
+}
+
+/* Imagens e vídeos responsivos */
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Classes utilitárias */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 10px;
+	}
+}
+
+/* Links */
+a {
+	color: #909090;
+}
+
+a:hover {
+	color: #6c6c6c;
+}
+
+/* Botões */
+button {
+	background-color: #474747;
+	color: #b5b5b5;
+	border: 1px solid #6c6c6c;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #6c6c6c;
+}
