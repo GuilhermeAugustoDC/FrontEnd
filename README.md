@@ -1,16 +1,53 @@
-# React + Vite
+# FrontEnd
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém o frontend do sistema de gerenciamento de tarólogos, desenvolvido em React + Vite.
 
-Currently, two official plugins are available:
+## Estrutura
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **src/pages/**: Páginas principais (Home, Tests)
+- **src/components/**: Componentes reutilizáveis (Button, FormContainer, InputField)
+- **src/services/api.js**: Configuração do Axios para comunicação com o backend
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Cadastro de tarólogos
+- Página de testes para todas as rotas do backend
+- Visualização dos resultados das requisições
 
-## Expanding the ESLint configuration
+## Como rodar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Instale as dependências:
+   ```
+   npm install
+   ```
+2. Inicie o servidor de desenvolvimento:
+   ```
+   npm run dev
+   ```
+3. Acesse `http://localhost:5173` no navegador
+
+## Comunicação com o BackEnd
+
+- O frontend faz requisições HTTP para o backend usando Axios
+- O endereço base da API está configurado em `src/services/api.js` (por padrão: `http://localhost:3000/api`)
+- As páginas e componentes consomem as rotas para cadastrar e consultar dados
+
+## Exemplos de uso
+
+- Página **Home**: cadastro de tarólogo
+- Página **Tests**: testes manuais das rotas do backend
+- Páginas acessíveis:
+	- **Home** (`/`): formulário de cadastro de tarólogo
+	- **Tests** (`/tests`): interface para testar manualmente as rotas do backend
+
+---
+
+## Comunicação entre FrontEnd e BackEnd
+
+- O frontend envia dados via HTTP (POST, GET, PUT, DELETE) para o backend
+- O backend processa, valida, salva no banco e retorna respostas para o frontend
+- O fluxo principal é: usuário cadastra tarólogo → backend salva e retorna os dados
+
+---
+
+Para dúvidas ou melhorias, consulte os arquivos de cada pasta ou peça ajuda ao assistente técnico!
